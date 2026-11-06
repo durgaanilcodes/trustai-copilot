@@ -1,0 +1,10 @@
+# TrustAI - runtime dependencies (Phase 1)
+# Later phases add: sentence-transformers, psycopg, pgvector, langgraph, streamlit, etc.
+# Each library is added only when the phase that needs it arrives.
+
+fastapi>=0.115,<1.0          # Web API framework (type-hint driven, auto docs at /docs)
+uvicorn[standard]>=0.30      # ASGI server that runs FastAPI
+python-multipart>=0.0.9      # Required by FastAPI to receive file uploads
+pydantic>=2.7,<3.0           # Data validation / response models
+python-dotenv>=1.0           # Loads settings from a .env file
+pypdf>=4.2                   # Pure-Python PDF text extraction (no OCR)
